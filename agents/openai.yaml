@@ -1,0 +1,8 @@
+interface:
+  display_name: "HTML Slide Builder"
+  short_description: "HTML decks with palettes and presets"
+  brand_color: "#3182F6"
+  default_prompt: "Use $html-slide-builder to create a polished HTML slide deck with the Trust Blue palette."
+
+policy:
+  allow_implicit_invocation: true
