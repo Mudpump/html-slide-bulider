@@ -19,8 +19,8 @@ Clone this repository into your Codex skills folder.
 You can ask Codex:
 
 ```text
-이 GitHub skill을 내 Codex에 설치해줘:
-https://github.com/YOUR_ID/html-slide-builder
+GitHub skill을 내 Codex에 설치해줘:
+https://github.com/Mudpump/html-slide-builder
 ```
 
 Codex should clone the whole repository into the local skills folder so that `SKILL.md` is directly under `html-slide-builder`.
