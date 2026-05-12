@@ -20,7 +20,7 @@ You can ask Codex:
 
 ```text
 GitHub skill을 내 Codex에 설치해줘:
-https://github.com/Mudpump/html-slide-builder
+https://github.com/Mudpump/html-slide-bulider
 ```
 
 Codex should clone the whole repository into the local skills folder so that `SKILL.md` is directly under `html-slide-builder`.
@@ -29,14 +29,14 @@ Codex should clone the whole repository into the local skills folder so that `SK
 
 ```bash
 mkdir -p ~/.codex/skills
-git clone https://github.com/YOUR_ID/html-slide-builder.git ~/.codex/skills/html-slide-builder
+git clone https://github.com/Mudpump/html-slide-bulider.git ~/.codex/skills/html-slide-builder
 ```
 
 ### Windows PowerShell
 
 ```powershell
 New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills"
-git clone https://github.com/YOUR_ID/html-slide-builder.git "$env:USERPROFILE\.codex\skills\html-slide-builder"
+git clone https://github.com/Mudpump/html-slide-bulider.git "$env:USERPROFILE\.codex\skills\html-slide-builder"
 ```
 
 If you use `CODEX_HOME`, install into:
