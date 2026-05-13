@@ -64,7 +64,9 @@ Stage 3: Content
 - After palette and design are selected, ask only for the minimum content needed:
   "좋아요. 이제 주제/내용을 알려주세요. 발표 시간은 몇 분이고, 표지를 제외한 본문 슬라이드는 몇 장을 원하시나요? 청중이나 꼭 들어가야 할 내용이 있으면 같이 적어주세요."
 - Ask whether a cover slide is needed before drafting the storyboard:
-  "표지 슬라이드를 추가할까요? 추가하면 본문 장수에 1장을 더해 `slide-00.html`로 만듭니다. 필요하면 우측 하단에 넣을 회사/소속/이름도 알려주세요."
+  "표지 슬라이드를 추가할까요? 추가하면 본문 장수에 1장을 더해 `slide-00.html`로 만듭니다. 필요하면 우측 하단에 넣을 회사/부서/이름·직함도 알려주세요."
+- If combining the content and cover question into one message, always ask for presenter identity in the same sentence:
+  "주제와 핵심 내용, 발표 시간, 표지를 제외한 본문 슬라이드 수를 알려주세요. 표지가 필요하면 우측 하단에 넣을 회사/부서/이름·직함도 같이 적어주세요."
 - If the user provides presenter identity, treat that as a cover-slide signal unless they explicitly say no cover. Place the identity in the lower-right cover block using this structure:
   `Company / Department / Name + title`.
 - Treat every requested slide count as the number of content slides, excluding the cover. Do not subtract one for the cover.
