@@ -3,6 +3,7 @@ import { createRequire } from 'node:module';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
+import { pathToFileURL } from 'node:url';
 
 function parseArgs(argv) {
   const args = {
@@ -39,11 +40,15 @@ function usage() {
 }
 
 function tryRequire(packageName) {
+  const codexRuntimeRoots = [
+    path.join(os.homedir(), '.cache', 'codex-runtimes', 'codex-primary-runtime', 'dependencies', 'node', 'node_modules'),
+    path.join(os.homedir(), 'AppData', 'Local', 'codex-runtimes', 'codex-primary-runtime', 'dependencies', 'node', 'node_modules'),
+  ];
   const candidates = [
     process.env.HTML_SLIDE_BUILDER_NODE_MODULES,
     ...(process.env.NODE_PATH ? process.env.NODE_PATH.split(path.delimiter) : []),
     path.join(process.cwd(), 'node_modules'),
-    path.join(os.homedir(), '.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules'),
+    ...codexRuntimeRoots,
   ].filter(Boolean);
 
   for (const candidate of candidates) {
@@ -106,7 +111,7 @@ async function main() {
 
   try {
     for (const slide of slides) {
-      await page.goto(`file://${path.join(deckDir, slide)}`, { waitUntil: 'networkidle' });
+      await page.goto(pathToFileURL(path.join(deckDir, slide)).href, { waitUntil: 'networkidle' });
       const slideBox = page.locator('.slide');
       await slideBox.waitFor({ state: 'visible' });
       const tempImage = path.join(deckDir, `${slide.replace('.html', '')}.export.png`);

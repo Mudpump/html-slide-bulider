@@ -22,9 +22,10 @@ Use Palette 01, `Trust Blue`, as the default brand-like palette unless the user 
 7. If a cover slide is requested, create it as `slide-00.html`; create content slides as `slide-01.html`, `slide-02.html`, etc. If no cover slide is requested, start at `slide-01.html` unless the repo uses a different convention.
 8. Use `assets/templates/basic-slide.html` as the starting point when no existing deck template is present.
 9. Render the slides in a browser and check that text fits, contrast is sufficient, and the slide is visually nonblank.
-10. Iterate on layout after visual QA. Do not finish with clipped text, overlapping elements, or inconsistent palette tokens.
-11. After all requested HTML slide files are created and visually checked, ask whether to convert them into one high-resolution merged PDF.
-12. If the user asks to convert, export, or merge the HTML slides to PDF, use the high-resolution PDF export workflow below.
+10. Run `scripts/qa_html_slides.mjs <deck-folder>` and fix any reported errors before finalizing.
+11. Iterate on layout after visual QA. Do not finish with clipped text, overlapping elements, or inconsistent palette tokens.
+12. After all requested HTML slide files are created and visually checked, ask whether to convert them into one high-resolution merged PDF.
+13. If the user asks to convert, export, or merge the HTML slides to PDF, use the high-resolution PDF export workflow below.
 
 ## Intake Interview
 
@@ -149,6 +150,7 @@ Image rules:
 - For NIA-related decks, the cover slide is required unless the user explicitly says no cover. Generate it as `slide-00.html`.
 - Use `assets/backgrounds/nia_picture.jpg` as the default cover background for NIA-related decks unless the user provides another approved image.
 - On NIA cover slides, use the NIA image as a subtle full-slide background with a soft overlay, and place the presenter block at the lower right.
+- The background image must remain visibly recognizable after the overlay on normal monitors and in exported PDFs. Avoid overlays stronger than roughly 85-90% white opacity unless the building or subject is still discernible.
 - Always embed NIA cover background images as base64 data URIs inside `slide-00.html`; do not reference `assets/backgrounds/nia_picture.jpg` directly from the generated slide.
 - For any cover slide that may be moved to another PC as standalone HTML, embed the cover image as a base64 data URI inside the HTML instead of referencing an external or relative image path.
 - Use `scripts/image_to_data_uri.py assets/backgrounds/nia_picture.jpg` to generate the data URI, then place it in CSS:
@@ -164,6 +166,7 @@ Image rules:
 - Keep background images subtle enough that the title remains readable.
 - Add a soft overlay using palette tokens, such as `linear-gradient(...)`, instead of darkening the image destructively.
 - For cover slides, use one strong full-bleed or large background image only when it supports the presentation theme. Otherwise use a clean editorial background with palette shapes and no image.
+- After rendering, verify that the background remains visible in both a browser screenshot and the exported PDF.
 - If the user wants image choices, show or generate a preview contact sheet before using them in slides.
 
 When adapting an existing deck, run `scripts/inspect_slide_colors.py <slide files>` to identify repeated hex colors before defining palette tokens.
@@ -261,6 +264,8 @@ Final delivery wording:
 Before finalizing:
 
 - Open representative slides in a browser.
+- Run `node /path/to/html-slide-builder/scripts/qa_html_slides.mjs <deck-folder>` before final delivery. Fix errors for missing `.slide`, blank/near-blank rendering, or elements outside the slide canvas.
+- Treat QA warnings about element overflow as a reason to inspect and adjust text, cards, footers, and labels before delivery.
 - Check title, body, card, and footer text for clipping.
 - Check that primary and muted text have readable contrast.
 - Check that slide numbers, brand labels, and tags are consistently placed.
