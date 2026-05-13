@@ -96,6 +96,14 @@ The skill will guide the user through:
 5. HTML slide generation
 6. Optional high-resolution PDF export
 
+## Example Decks
+
+- [NIA Intelligent Technology Infrastructure Strategy](examples/nia-intelligent-tech-infra-strategy/)
+  - [storyboard.md](examples/nia-intelligent-tech-infra-strategy/storyboard.md)
+  - [slide-00.html](examples/nia-intelligent-tech-infra-strategy/slide-00.html)
+  - [slide-01.html](examples/nia-intelligent-tech-infra-strategy/slide-01.html)
+  - [PDF](examples/nia-intelligent-tech-infra-strategy/nia-intelligent-tech-infra-strategy.pdf)
+
 ## Preview Files
 
 The skill includes local previews:
@@ -210,6 +218,14 @@ html 슬라이드 만들어
 4. `storyboard.md` 검토
 5. HTML 슬라이드 생성
 6. 선택 사항으로 고해상도 PDF 변환
+
+## 예제 덱
+
+- [NIA 지능기술인프라본부 발전전략](examples/nia-intelligent-tech-infra-strategy/)
+  - [storyboard.md](examples/nia-intelligent-tech-infra-strategy/storyboard.md)
+  - [slide-00.html](examples/nia-intelligent-tech-infra-strategy/slide-00.html)
+  - [slide-01.html](examples/nia-intelligent-tech-infra-strategy/slide-01.html)
+  - [PDF](examples/nia-intelligent-tech-infra-strategy/nia-intelligent-tech-infra-strategy.pdf)
 
 ## 프리뷰 파일
 
