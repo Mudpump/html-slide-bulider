@@ -99,11 +99,40 @@ The skill will guide the user through:
 ## Example Decks
 
 - [Agentic AI NIA Direction](examples/agentic-ai-nia-direction/)
+
+  [![Agentic AI NIA Direction preview](examples/agentic-ai-nia-direction/preview.png)](examples/agentic-ai-nia-direction/agentic-ai-nia-direction.pdf)
+
+  - [storyboard.md](examples/agentic-ai-nia-direction/storyboard.md)
+  - [slide-00.html](examples/agentic-ai-nia-direction/slide-00.html)
+  - [slide-01.html](examples/agentic-ai-nia-direction/slide-01.html)
+  - [slide-02.html](examples/agentic-ai-nia-direction/slide-02.html)
+  - [PDF](examples/agentic-ai-nia-direction/agentic-ai-nia-direction.pdf)
 - [HTML Slide Deck](examples/html-slide-deck/)
+  - [storyboard.md](examples/html-slide-deck/storyboard.md)
+  - [slide-00.html](examples/html-slide-deck/slide-00.html)
+  - [slide-01.html](examples/html-slide-deck/slide-01.html)
+  - [slide-02.html](examples/html-slide-deck/slide-02.html)
+  - [PDF](examples/html-slide-deck/html-slide-deck.pdf)
 - [NIA Intelligent Technology Infrastructure Strategy](examples/nia-intelligent-tech-infra-strategy/)
+  - [storyboard.md](examples/nia-intelligent-tech-infra-strategy/storyboard.md)
+  - [slide-00.html](examples/nia-intelligent-tech-infra-strategy/slide-00.html)
+  - [slide-01.html](examples/nia-intelligent-tech-infra-strategy/slide-01.html)
+  - [PDF](examples/nia-intelligent-tech-infra-strategy/nia-intelligent-tech-infra-strategy.pdf)
 - [Public Sector Agentic AI Strategy](examples/public-sector-agentic-ai-strategy-3slides/)
-- [Public Sector GenAI Strategy](examples/public-sector-genai-strategy-2slides/)
+  - [storyboard.md](examples/public-sector-agentic-ai-strategy-3slides/storyboard.md)
+  - [slide-00.html](examples/public-sector-agentic-ai-strategy-3slides/slide-00.html)
+  - [slide-01.html](examples/public-sector-agentic-ai-strategy-3slides/slide-01.html)
+  - [slide-02.html](examples/public-sector-agentic-ai-strategy-3slides/slide-02.html)
+  - [PDF](examples/public-sector-agentic-ai-strategy-3slides/public-sector-agentic-ai-strategy-3slides.pdf)
 - [Test HTML Slides](examples/test-html-slides/)
+
+  [![Test HTML Slides preview](examples/test-html-slides/preview.png)](examples/test-html-slides/test-html-slides.pdf)
+
+  - [slide-01.html](examples/test-html-slides/slide-01.html)
+  - [slide-02.html](examples/test-html-slides/slide-02.html)
+  - [PDF](examples/test-html-slides/test-html-slides.pdf)
+
+GitHub README does not reliably embed PDF files inline. Link to the PDF file for GitHub's file viewer, or add PNG/JPG slide thumbnails and link those images to the PDF when an inline visual preview is needed.
 
 ## Preview Files
 
@@ -223,11 +252,40 @@ html 슬라이드 만들어
 ## 예제 덱
 
 - [에이전틱 AI NIA 발전 방향](examples/agentic-ai-nia-direction/)
+
+  [![에이전틱 AI NIA 발전 방향 미리보기](examples/agentic-ai-nia-direction/preview.png)](examples/agentic-ai-nia-direction/agentic-ai-nia-direction.pdf)
+
+  - [storyboard.md](examples/agentic-ai-nia-direction/storyboard.md)
+  - [slide-00.html](examples/agentic-ai-nia-direction/slide-00.html)
+  - [slide-01.html](examples/agentic-ai-nia-direction/slide-01.html)
+  - [slide-02.html](examples/agentic-ai-nia-direction/slide-02.html)
+  - [PDF](examples/agentic-ai-nia-direction/agentic-ai-nia-direction.pdf)
 - [HTML 슬라이드 덱](examples/html-slide-deck/)
+  - [storyboard.md](examples/html-slide-deck/storyboard.md)
+  - [slide-00.html](examples/html-slide-deck/slide-00.html)
+  - [slide-01.html](examples/html-slide-deck/slide-01.html)
+  - [slide-02.html](examples/html-slide-deck/slide-02.html)
+  - [PDF](examples/html-slide-deck/html-slide-deck.pdf)
 - [NIA 지능기술인프라본부 발전전략](examples/nia-intelligent-tech-infra-strategy/)
+  - [storyboard.md](examples/nia-intelligent-tech-infra-strategy/storyboard.md)
+  - [slide-00.html](examples/nia-intelligent-tech-infra-strategy/slide-00.html)
+  - [slide-01.html](examples/nia-intelligent-tech-infra-strategy/slide-01.html)
+  - [PDF](examples/nia-intelligent-tech-infra-strategy/nia-intelligent-tech-infra-strategy.pdf)
 - [공공부문 에이전틱 AI 확산 전략](examples/public-sector-agentic-ai-strategy-3slides/)
-- [공공부문 생성형 AI 전략](examples/public-sector-genai-strategy-2slides/)
+  - [storyboard.md](examples/public-sector-agentic-ai-strategy-3slides/storyboard.md)
+  - [slide-00.html](examples/public-sector-agentic-ai-strategy-3slides/slide-00.html)
+  - [slide-01.html](examples/public-sector-agentic-ai-strategy-3slides/slide-01.html)
+  - [slide-02.html](examples/public-sector-agentic-ai-strategy-3slides/slide-02.html)
+  - [PDF](examples/public-sector-agentic-ai-strategy-3slides/public-sector-agentic-ai-strategy-3slides.pdf)
 - [테스트 HTML 슬라이드](examples/test-html-slides/)
+
+  [![테스트 HTML 슬라이드 미리보기](examples/test-html-slides/preview.png)](examples/test-html-slides/test-html-slides.pdf)
+
+  - [slide-01.html](examples/test-html-slides/slide-01.html)
+  - [slide-02.html](examples/test-html-slides/slide-02.html)
+  - [PDF](examples/test-html-slides/test-html-slides.pdf)
+
+GitHub README 안에서는 PDF를 안정적으로 직접 임베드하기 어렵습니다. PDF 파일 링크를 걸면 GitHub 파일 뷰어에서 열 수 있고, README 안에 바로 보이는 샘플이 필요하면 PNG/JPG 썸네일을 추가한 뒤 그 이미지를 PDF에 링크하는 방식을 권장합니다.
 
 ## 프리뷰 파일
 
