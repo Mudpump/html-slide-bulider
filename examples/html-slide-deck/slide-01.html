@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에이전틱 AI 시대 정책 지원 방향 - 01</title>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --color-primary: #F9735B;
+    --color-primary-deep: #C2412D;
+    --color-primary-soft: #FFE8E1;
+    --color-primary-bg: #FFF6F2;
+    --color-text: #2A1F1B;
+    --color-text-muted: #6B5550;
+    --color-text-subtle: #A99690;
+    --color-line: #E7D7D0;
+    --color-line-soft: #F5ECE8;
+    --color-surface: #FFFFFF;
+    --color-surface-muted: #FFFAF7;
+    --color-page-bg: #EFE6E1;
+    --color-success: #2F9E75;
+    --color-warning: #E99A2C;
+    --color-violet: #9B6DFF;
+  }
+  html,
+  body {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--color-page-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+  }
+  .deck {
+    display: flex;
+    justify-content: center;
+    padding: 48px 24px;
+  }
+  .slide {
+    width: 1280px;
+    max-width: 100%;
+    height: 720px;
+    background: var(--color-surface);
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(42, 31, 27, 0.10);
+    padding: 58px 70px 54px;
+    position: relative;
+    overflow: hidden;
+  }
+  .brand {
+    position: absolute;
+    top: 30px;
+    right: 46px;
+    color: var(--color-text-subtle);
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+  }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--color-primary-soft);
+    color: var(--color-primary-deep);
+    font-size: 13px;
+    font-weight: 850;
+  }
+  .tag::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-primary);
+  }
+  h1 {
+    margin-top: 24px;
+    max-width: 1000px;
+    font-size: 46px;
+    line-height: 1.18;
+    font-weight: 850;
+    letter-spacing: 0;
+  }
+  h1 span { color: var(--color-primary-deep); }
+  .lead {
+    margin-top: 18px;
+    max-width: 850px;
+    color: var(--color-text-muted);
+    font-size: 18px;
+    line-height: 1.58;
+    font-weight: 600;
+  }
+  .signal-row {
+    margin-top: 42px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .signal {
+    min-height: 210px;
+    border-radius: 18px;
+    border: 1px solid var(--color-line-soft);
+    background: var(--color-surface-muted);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .signal.primary {
+    color: white;
+    border: 0;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-deep) 100%);
+    box-shadow: 0 16px 32px rgba(249, 115, 91, 0.24);
+  }
+  .signal-num {
+    color: var(--color-primary);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+  }
+  .signal.primary .signal-num { color: rgba(255, 255, 255, 0.84); }
+  .signal-title {
+    margin-top: 22px;
+    font-size: 22px;
+    line-height: 1.28;
+    font-weight: 850;
+  }
+  .signal-body {
+    margin-top: auto;
+    color: var(--color-text-muted);
+    font-size: 14px;
+    line-height: 1.55;
+    font-weight: 600;
+  }
+  .signal.primary .signal-body { color: rgba(255, 255, 255, 0.88); }
+  .bottom-note {
+    position: absolute;
+    left: 70px;
+    right: 160px;
+    bottom: 30px;
+    border-top: 1px solid var(--color-line-soft);
+    padding-top: 14px;
+    color: var(--color-text-subtle);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .slide-num {
+    position: absolute;
+    right: 46px;
+    bottom: 30px;
+    color: var(--color-text-subtle);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+  }
+  .slide-num span { color: var(--color-primary-deep); }
+</style>
+</head>
+<body>
+  <main class="deck">
+    <section class="slide">
+      <div class="brand">NIA · AGENTIC AI POLICY</div>
+      <div class="tag">Context Framing</div>
+      <h1>에이전틱 AI는 공공 디지털 전환의 <span>운영 방식과 정책 지원 체계</span>를 다시 묻습니다.</h1>
+      <p class="lead">단순 생성형 AI 활용을 넘어, 목표 설정·작업 분해·도구 사용·결과 검토가 반복되는 체계로 진화하면서 공공 영역의 적용 기준도 함께 바뀌어야 합니다.</p>
+
+      <div class="signal-row">
+        <article class="signal">
+          <div class="signal-num">SIGNAL 01</div>
+          <div class="signal-title">응답형 AI에서<br>수행형 AI로</div>
+          <div class="signal-body">단발성 답변을 넘어 과업을 쪼개고, 필요한 도구를 호출하며, 결과를 점검하는 방식으로 이동합니다.</div>
+        </article>
+        <article class="signal primary">
+          <div class="signal-num">SIGNAL 02</div>
+          <div class="signal-title">공공 서비스의<br>업무 구조 변화</div>
+          <div class="signal-body">행정 서비스, 데이터 기반 정책, 업무 자동화, 국민 접점 서비스에서 구조적 변화 가능성이 커집니다.</div>
+        </article>
+        <article class="signal">
+          <div class="signal-num">SIGNAL 03</div>
+          <div class="signal-title">정책 지원의<br>범위 확대</div>
+          <div class="signal-body">기술 도입 지원만으로는 부족하며 신뢰성, 책임성, 데이터 거버넌스, 현장 역량을 함께 다뤄야 합니다.</div>
+        </article>
+      </div>
+
+      <div class="bottom-note">Opening message: NIA의 역할은 AI 도입 지원을 넘어, 공공 운영 체계가 AI와 함께 일하도록 돕는 방향으로 확장됩니다.</div>
+      <div class="slide-num"><span>01</span> / 02</div>
+    </section>
+  </main>
+</body>
+</html>

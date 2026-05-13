@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Slide Builder Test - 02</title>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --color-primary: #3182F6;
+    --color-primary-deep: #1B64DA;
+    --color-primary-soft: #E8F3FF;
+    --color-primary-bg: #F2F8FF;
+    --color-text: #191F28;
+    --color-text-muted: #4E5968;
+    --color-text-subtle: #8B95A1;
+    --color-line: #D1D6DB;
+    --color-line-soft: #F2F4F6;
+    --color-surface: #FFFFFF;
+    --color-surface-muted: #F9FAFB;
+    --color-page-bg: #E5E8EB;
+    --color-success: #00C896;
+    --color-warning: #FF7E36;
+    --color-violet: #8B5CF6;
+  }
+  html,
+  body {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--color-page-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+  }
+  .deck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px;
+  }
+  .slide {
+    width: 1280px;
+    max-width: 100%;
+    height: 720px;
+    background: var(--color-surface);
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    padding: 72px 80px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .brand {
+    position: absolute;
+    top: 32px;
+    right: 48px;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--color-line);
+    letter-spacing: 0.1em;
+  }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 999px;
+    width: fit-content;
+  }
+  .tag::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--color-primary);
+    border-radius: 50%;
+  }
+  h2 {
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: 850;
+    line-height: 1.18;
+  }
+  .accent { color: var(--color-primary); }
+  .desc {
+    margin-top: 14px;
+    font-size: 18px;
+    color: var(--color-text-subtle);
+    font-weight: 600;
+  }
+  .grid {
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    flex: 1;
+  }
+  .preset {
+    border-radius: 22px;
+    padding: 30px;
+    border: 1.5px solid var(--color-line-soft);
+    background: var(--color-surface-muted);
+    display: flex;
+    flex-direction: column;
+  }
+  .preset.active {
+    background: linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-deep) 100%);
+    color: white;
+    border: 0;
+    box-shadow: 0 16px 32px rgba(49, 130, 246, 0.25);
+  }
+  .preset.alt {
+    background: var(--color-primary-bg);
+    border-color: #DCEAFE;
+  }
+  .num {
+    font-size: 13px;
+    font-weight: 850;
+    color: var(--color-text-subtle);
+    letter-spacing: 0.08em;
+  }
+  .active .num { color: rgba(255, 255, 255, 0.86); }
+  .alt .num { color: var(--color-primary); }
+  .title {
+    margin-top: 28px;
+    font-size: 25px;
+    font-weight: 850;
+    line-height: 1.25;
+  }
+  .body {
+    margin-top: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+  }
+  .active .body { color: rgba(255, 255, 255, 0.9); }
+  .chip {
+    margin-top: auto;
+    width: fit-content;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: white;
+    color: var(--color-primary);
+    font-size: 12px;
+    font-weight: 850;
+  }
+  .active .chip {
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+  }
+  .slide-num {
+    position: absolute;
+    right: 48px;
+    bottom: 32px;
+    font-size: 13px;
+    color: var(--color-text-subtle);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  .slide-num span { color: var(--color-primary); }
+</style>
+</head>
+<body>
+  <div class="deck">
+    <section class="slide">
+      <div class="brand">HTML SLIDE BUILDER</div>
+      <div class="tag">Skill Test · 02</div>
+      <h2>색감은 고정하고,<br><span class="accent">디자인은 선택</span>할 수 있습니다.</h2>
+      <p class="desc">같은 회사색을 유지하면서 발표 목적에 맞는 레이아웃 톤을 고릅니다.</p>
+      <div class="grid">
+        <div class="preset active">
+          <div class="num">DESIGN 01</div>
+          <div class="title">Clean SaaS</div>
+          <div class="body">내부 발표, AI 교육, 제품 소개에 어울리는 기본 스타일입니다.</div>
+          <div class="chip">Default</div>
+        </div>
+        <div class="preset">
+          <div class="num">DESIGN 02</div>
+          <div class="title">Executive Brief</div>
+          <div class="body">전략, KPI, 의사결정 자료처럼 밀도 있는 보고에 맞춥니다.</div>
+          <div class="chip">Report</div>
+        </div>
+        <div class="preset alt">
+          <div class="num">DESIGN 03</div>
+          <div class="title">Workshop Playbook</div>
+          <div class="body">강의, 실습, 체크리스트 중심의 교육형 자료에 적합합니다.</div>
+          <div class="chip">Training</div>
+        </div>
+      </div>
+      <div class="slide-num"><span>02</span> / 02</div>
+    </section>
+  </div>
+</body>
+</html>

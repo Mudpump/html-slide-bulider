@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에이전틱 AI 시대 NIA 발전 방향 - 02</title>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --color-primary: #2563EB;
+    --color-primary-deep: #1E3A8A;
+    --color-primary-soft: #EAF1FF;
+    --color-primary-bg: #F5F7FB;
+    --color-text: #111827;
+    --color-text-muted: #4B5563;
+    --color-text-subtle: #9CA3AF;
+    --color-line: #D1D5DB;
+    --color-line-soft: #EEF0F4;
+    --color-surface: #FFFFFF;
+    --color-surface-muted: #F7F8FA;
+    --color-page-bg: #E7EAEE;
+  }
+  html,
+  body {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--color-page-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+  }
+  .deck {
+    display: flex;
+    justify-content: center;
+    padding: 48px 24px;
+  }
+  .slide {
+    width: 1280px;
+    max-width: 100%;
+    height: 720px;
+    background: var(--color-surface);
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(17, 24, 39, 0.10);
+    padding: 54px 68px;
+    position: relative;
+    overflow: hidden;
+  }
+  .brand {
+    position: absolute;
+    top: 30px;
+    right: 46px;
+    color: var(--color-text-subtle);
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+  }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--color-primary-soft);
+    color: var(--color-primary-deep);
+    font-size: 13px;
+    font-weight: 850;
+  }
+  .tag::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-primary);
+  }
+  h1 {
+    margin-top: 20px;
+    max-width: 1050px;
+    font-size: 42px;
+    line-height: 1.18;
+    font-weight: 850;
+    letter-spacing: 0;
+  }
+  h1 span { color: var(--color-primary-deep); }
+  .content {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: 1.22fr 0.78fr;
+    gap: 24px;
+  }
+  .matrix {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .axis {
+    min-height: 174px;
+    border-radius: 16px;
+    background: var(--color-surface-muted);
+    border: 1px solid var(--color-line-soft);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+  }
+  .axis-num {
+    color: var(--color-primary);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+  }
+  .axis-title {
+    margin-top: 12px;
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: 850;
+  }
+  .axis-body {
+    margin-top: auto;
+    color: var(--color-text-muted);
+    font-size: 13px;
+    line-height: 1.52;
+    font-weight: 600;
+  }
+  .callout {
+    min-height: 362px;
+    border-radius: 20px;
+    color: white;
+    background: linear-gradient(145deg, var(--color-primary) 0%, var(--color-primary-deep) 100%);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 16px 32px rgba(37, 99, 235, 0.22);
+  }
+  .callout-label {
+    font-size: 13px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.82);
+    letter-spacing: 0.08em;
+  }
+  .callout-title {
+    margin-top: 46px;
+    font-size: 29px;
+    line-height: 1.24;
+    font-weight: 900;
+  }
+  .callout-body {
+    margin-top: auto;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 15px;
+    line-height: 1.55;
+    font-weight: 650;
+  }
+  .footer {
+    position: absolute;
+    left: 68px;
+    right: 150px;
+    bottom: 30px;
+    border-top: 1px solid var(--color-line-soft);
+    padding-top: 13px;
+    color: var(--color-text-subtle);
+    font-size: 12px;
+    line-height: 1.45;
+    font-weight: 700;
+  }
+  .slide-num {
+    position: absolute;
+    right: 46px;
+    bottom: 30px;
+    color: var(--color-text-subtle);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+  }
+  .slide-num span { color: var(--color-primary-deep); }
+</style>
+</head>
+<body>
+  <main class="deck">
+    <section class="slide">
+      <div class="brand">NIA · AGENTIC AI DIRECTION</div>
+      <div class="tag">Development Direction</div>
+      <h1>NIA는 에이전틱 AI 시대에 <span>공공 AI 표준·공통 인프라·실증 플랫폼·전문 역량 허브</span>로 발전해야 합니다.</h1>
+      <div class="content">
+        <div class="matrix">
+          <article class="axis">
+            <div class="axis-num">01 · STANDARD</div>
+            <div class="axis-title">공공 AI 표준</div>
+            <div class="axis-body">에이전트 자율성, 위험 등급, 검증 절차, 책임 소재에 대한 가이드라인을 정립합니다.</div>
+          </article>
+          <article class="axis">
+            <div class="axis-num">02 · INFRA</div>
+            <div class="axis-title">공통 인프라</div>
+            <div class="axis-body">공공 데이터, API, 보안 실행환경, 모델·도구 연계 기반을 제공합니다.</div>
+          </article>
+          <article class="axis">
+            <div class="axis-num">03 · PLATFORM</div>
+            <div class="axis-title">실증 플랫폼</div>
+            <div class="axis-body">부처·지자체·민간이 함께 검증하는 과제 발굴, 샌드박스, 성과 측정 체계를 운영합니다.</div>
+          </article>
+          <article class="axis">
+            <div class="axis-num">04 · CAPABILITY</div>
+            <div class="axis-title">전문 역량 허브</div>
+            <div class="axis-body">실무자가 에이전틱 워크플로우를 설계·감독하도록 교육과 방법론을 제공합니다.</div>
+          </article>
+        </div>
+        <aside class="callout">
+          <div class="callout-label">TAKEAWAY</div>
+          <div class="callout-title">AI 도입 지원기관에서<br>공공 AI 운영체계 설계기관으로</div>
+          <div class="callout-body">발전 방향의 핵심은 기술 확산 자체가 아니라, 공공이 AI와 함께 일하는 방식을 신뢰 가능하게 만드는 것입니다.</div>
+        </aside>
+      </div>
+      <div class="footer">Execution frame: 표준은 신뢰를 만들고, 인프라는 재사용을 만들며, 실증과 역량은 현장 확산을 만듭니다.</div>
+      <div class="slide-num"><span>02</span> / 02</div>
+    </section>
+  </main>
+</body>
+</html>

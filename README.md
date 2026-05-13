@@ -98,11 +98,16 @@ The skill will guide the user through:
 
 ## Example Decks
 
+- [Agentic AI NIA Direction](examples/agentic-ai-nia-direction/)
+- [HTML Slide Deck](examples/html-slide-deck/)
 - [NIA Intelligent Technology Infrastructure Strategy](examples/nia-intelligent-tech-infra-strategy/)
   - [storyboard.md](examples/nia-intelligent-tech-infra-strategy/storyboard.md)
   - [slide-00.html](examples/nia-intelligent-tech-infra-strategy/slide-00.html)
   - [slide-01.html](examples/nia-intelligent-tech-infra-strategy/slide-01.html)
   - [PDF](examples/nia-intelligent-tech-infra-strategy/nia-intelligent-tech-infra-strategy.pdf)
+- [Public Sector Agentic AI Strategy](examples/public-sector-agentic-ai-strategy-3slides/)
+- [Public Sector GenAI Strategy](examples/public-sector-genai-strategy-2slides/)
+- [Test HTML Slides](examples/test-html-slides/)
 
 ## Preview Files
 
@@ -221,11 +226,16 @@ html 슬라이드 만들어
 
 ## 예제 덱
 
+- [에이전틱 AI NIA 발전 방향](examples/agentic-ai-nia-direction/)
+- [HTML 슬라이드 덱](examples/html-slide-deck/)
 - [NIA 지능기술인프라본부 발전전략](examples/nia-intelligent-tech-infra-strategy/)
   - [storyboard.md](examples/nia-intelligent-tech-infra-strategy/storyboard.md)
   - [slide-00.html](examples/nia-intelligent-tech-infra-strategy/slide-00.html)
   - [slide-01.html](examples/nia-intelligent-tech-infra-strategy/slide-01.html)
   - [PDF](examples/nia-intelligent-tech-infra-strategy/nia-intelligent-tech-infra-strategy.pdf)
+- [공공부문 에이전틱 AI 확산 전략](examples/public-sector-agentic-ai-strategy-3slides/)
+- [공공부문 생성형 AI 전략](examples/public-sector-genai-strategy-2slides/)
+- [테스트 HTML 슬라이드](examples/test-html-slides/)
 
 ## 프리뷰 파일
 
