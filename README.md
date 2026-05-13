@@ -2,6 +2,8 @@
 
 Codex skill for creating HTML presentation slides with selectable palettes, design presets, storyboard-first planning, and cover-slide background support.
 
+[![Agentic AI NIA Direction preview](examples/agentic-ai-nia-direction/preview.png)](examples/agentic-ai-nia-direction/agentic-ai-nia-direction.pdf)
+
 ## What This Skill Does
 
 - Creates 16:9 HTML slide decks.
@@ -99,9 +101,6 @@ The skill will guide the user through:
 ## Example Decks
 
 - [Agentic AI NIA Direction](examples/agentic-ai-nia-direction/)
-
-  [![Agentic AI NIA Direction preview](examples/agentic-ai-nia-direction/preview.png)](examples/agentic-ai-nia-direction/agentic-ai-nia-direction.pdf)
-
   - [storyboard.md](examples/agentic-ai-nia-direction/storyboard.md)
   - [slide-00.html](examples/agentic-ai-nia-direction/slide-00.html)
   - [slide-01.html](examples/agentic-ai-nia-direction/slide-01.html)
@@ -125,9 +124,6 @@ The skill will guide the user through:
   - [slide-02.html](examples/public-sector-agentic-ai-strategy-3slides/slide-02.html)
   - [PDF](examples/public-sector-agentic-ai-strategy-3slides/public-sector-agentic-ai-strategy-3slides.pdf)
 - [Test HTML Slides](examples/test-html-slides/)
-
-  [![Test HTML Slides preview](examples/test-html-slides/preview.png)](examples/test-html-slides/test-html-slides.pdf)
-
   - [slide-01.html](examples/test-html-slides/slide-01.html)
   - [slide-02.html](examples/test-html-slides/slide-02.html)
   - [PDF](examples/test-html-slides/test-html-slides.pdf)
@@ -154,6 +150,8 @@ Open these files in a browser to compare palettes and design presets.
 # HTML Slide Builder 한국어 안내
 
 팔레트 선택, 디자인 프리셋, 스토리보드 우선 작성, 표지 배경 이미지, 고해상도 PDF 변환을 지원하는 Codex용 HTML 슬라이드 제작 스킬입니다.
+
+[![테스트 HTML 슬라이드 미리보기](examples/test-html-slides/preview.png)](examples/test-html-slides/test-html-slides.pdf)
 
 ## 이 스킬이 하는 일
 
@@ -252,9 +250,6 @@ html 슬라이드 만들어
 ## 예제 덱
 
 - [에이전틱 AI NIA 발전 방향](examples/agentic-ai-nia-direction/)
-
-  [![에이전틱 AI NIA 발전 방향 미리보기](examples/agentic-ai-nia-direction/preview.png)](examples/agentic-ai-nia-direction/agentic-ai-nia-direction.pdf)
-
   - [storyboard.md](examples/agentic-ai-nia-direction/storyboard.md)
   - [slide-00.html](examples/agentic-ai-nia-direction/slide-00.html)
   - [slide-01.html](examples/agentic-ai-nia-direction/slide-01.html)
@@ -278,9 +273,6 @@ html 슬라이드 만들어
   - [slide-02.html](examples/public-sector-agentic-ai-strategy-3slides/slide-02.html)
   - [PDF](examples/public-sector-agentic-ai-strategy-3slides/public-sector-agentic-ai-strategy-3slides.pdf)
 - [테스트 HTML 슬라이드](examples/test-html-slides/)
-
-  [![테스트 HTML 슬라이드 미리보기](examples/test-html-slides/preview.png)](examples/test-html-slides/test-html-slides.pdf)
-
   - [slide-01.html](examples/test-html-slides/slide-01.html)
   - [slide-02.html](examples/test-html-slides/slide-02.html)
   - [PDF](examples/test-html-slides/test-html-slides.pdf)
