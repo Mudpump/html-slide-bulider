@@ -13,7 +13,7 @@ Use Palette 01, `Trust Blue`, as the default brand-like palette unless the user 
 
 ## Workflow
 
-1. If the user gives only a broad request such as "슬라이드를 만들거야", "발표자료 만들어줘", or "HTML 슬라이드 만들자", run the short intake interview before creating files.
+1. If the user gives only a broad request such as "html 슬라이드", "html 슬라이드 만들어", "슬라이드를 만들거야", "발표자료 만들어줘", or "HTML 슬라이드 만들자", run the short intake interview before creating files.
 2. If the user already provides topic, audience, content slide count, palette/design preference, and output location, skip the interview and proceed.
 3. Choose one palette from `references/palettes.md`. Default to `Palette 01: Trust Blue` only when the user does not choose.
 4. Choose one design preset from `references/design-presets.md`. Default to `Design 01: Clean SaaS` only when the user does not choose.
