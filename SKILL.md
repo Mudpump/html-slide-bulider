@@ -169,6 +169,76 @@ Image rules:
 - After rendering, verify that the background remains visible in both a browser screenshot and the exported PDF.
 - If the user wants image choices, show or generate a preview contact sheet before using them in slides.
 
+### NIA Soft Gradient Cover Pattern
+
+For NIA-related cover slides, prefer the `NIA Soft Gradient Cover Pattern` unless the user explicitly asks for a dark, photo-heavy cover. This pattern keeps the NIA building recognizable while creating a light editorial gradient surface for the title.
+
+Pattern rules:
+
+- Use `assets/backgrounds/nia_picture.jpg` as a full-slide background.
+- Embed the image as a base64 data URI inside `slide-00.html`; do not reference the image file directly.
+- Use a separate `.bg` layer for the image and a separate `.overlay` layer for gradients.
+- Keep `.content` above both layers with `position: relative` and `z-index: 1`.
+- The overlay should be light enough for dark title text and transparent enough that the building remains visible.
+- Place the presenter block in the lower right, usually with a top border or left border using the primary color.
+
+Use this implementation pattern. Replace `data:image/jpeg;base64,...` with the output of `scripts/image_to_data_uri.py assets/backgrounds/nia_picture.jpg`.
+
+```html
+<section class="slide">
+  <div class="bg"></div>
+  <div class="overlay"></div>
+  <div class="content">
+    <!-- cover title, subtitle, tags, and presenter block -->
+  </div>
+</section>
+```
+
+```css
+.slide {
+  width: 1280px;
+  height: 720px;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.bg {
+  position: absolute;
+  inset: -10px;
+  background: url("data:image/jpeg;base64,...") center / cover no-repeat;
+  filter: blur(4px) saturate(0.92);
+  transform: scale(1.025);
+  opacity: 0.74;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      105deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(245, 247, 251, 0.86) 48%,
+      rgba(234, 241, 255, 0.28) 100%
+    ),
+    radial-gradient(
+      circle at 82% 20%,
+      rgba(37, 99, 235, 0.15),
+      transparent 34%
+    );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 72px 78px 62px;
+}
+```
+
+If the deck uses `Palette 01 Trust Blue`, map the blue radial accent to `rgba(49, 130, 246, 0.15)`. If it uses `Palette 02 Graphite Focus`, `rgba(37, 99, 235, 0.15)` is appropriate.
+
 When adapting an existing deck, run `scripts/inspect_slide_colors.py <slide files>` to identify repeated hex colors before defining palette tokens.
 
 ## Slide Rules
